@@ -1,4 +1,4 @@
-# SE-AnalogThrottleAPI
+# AnalogThrottle In-game Script API
 🕹️ API for interacting with the AnalogThrottle plugin from your in-game scripts
 
 **Note:** this is still a work in progress and possibly may change later, specially regarding the format data is passed down to scripts. Make sure to keep updated to prevent script bugs/crashes!
