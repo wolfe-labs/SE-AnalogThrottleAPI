@@ -7,9 +7,11 @@
 
 Make sure you have the [AnalogThrottle](https://github.com/wolfe-labs/SE-AnalogThrottlePlugin) plugin installed first, as it is the bridge between DirectInput's reading of controller data and your script!
 
-When creating a script to be used with the API, add this Shared Project as a reference on your Visual Studio Project.
+### Visual Studio
 
-Add the following entry to the top of your C# `Program.cs` file too:
+If you use Visual Studio for writing your scripts, you can use the Shared Project feature to reference it in your project and access its classes. You will need [MDK](https://github.com/malware-dev/MDK-SE) installed so that the compilation works correctly and the files are properly embedded on your script.
+
+With that out of the way, after creating your MDK script, add the following entry to the top of your C# `Program.cs` file:
 
 ```cs
 using IngameScript.WolfeLabs.AnalogThrottleAPI;
@@ -22,6 +24,14 @@ ControllerInputCollection inputs = ControllerInputCollection.FromString(argument
 ```
 
 With that done you should be ready to receive controller input directly in your script!
+
+### Vanilla Usage
+
+If you prefer not using an IDE or using MDK, you will need to import the two classes `ControllerInput` and `ControllerInputCollection` to your `Program.cs` file. With that done, make sure you add this line to your `Main` method:
+
+```cs
+ControllerInputCollection inputs = ControllerInputCollection.FromString(argument);
+```
 
 ## Usage
 

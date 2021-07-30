@@ -14,7 +14,9 @@ namespace IngameScript.WolfeLabs.AnalogThrottleAPI
         public static ControllerInputCollection FromArray (ControllerInput[] source)
         {
             ControllerInputCollection collection = new ControllerInputCollection();
-            collection.AddArray(source);
+            foreach (ControllerInput input in source) {
+                collection.Add(input);
+            }
             return collection;
         }
 
