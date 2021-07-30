@@ -25,6 +25,8 @@ With that done you should be ready to receive controller input directly in your 
 
 ## Usage
 
+Please keep in mind your Programmable Block **MUST** have the tag `[AnalogThrottle]` to work properly, otherwise the plugin will not communicate with it!
+
 Now that you're receiving events on your script via the `Main()` method, you can process each of the different controller actions however you desire. This includes using joysticks to control slider-based values from any grid block, such as Thrusters, Pistons, Rotors, etc. This can be done by looping through the `ControllerInputCollection inputs` contents. Each entry will have the following properties available:
 
 - `Source` - The name of the controller which sent that event
